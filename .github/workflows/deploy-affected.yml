@@ -119,6 +119,11 @@ jobs:
         shell: bash
         run: |
           ls -al dist/apps
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: applications
+          path: dist/apps
 
   deploy:
     runs-on: ubuntu-latest
