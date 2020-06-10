@@ -7,6 +7,4 @@ import '@nx-example/shared/header';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  // this is a comment
-}
+export class AppComponent {}
