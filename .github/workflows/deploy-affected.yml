@@ -102,5 +102,4 @@ jobs:
       - name: 'Test'
         shell: bash
         run: |
-          cd dist
           ls -al
