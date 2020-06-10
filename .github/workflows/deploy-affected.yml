@@ -93,7 +93,7 @@ jobs:
       - name: List Affected Apps
         shell: bash
         run: |
-          npx nx print-affected --target=build --select=tasks.target.project --configuration=production
+          npx nx print-affected --target=build --select=tasks.target.project --base=origin/master~1 --head=origin/master
 
   deploy:
     runs-on: ubuntu-latest
