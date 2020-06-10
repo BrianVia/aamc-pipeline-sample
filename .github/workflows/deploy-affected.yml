@@ -90,6 +90,10 @@ jobs:
         shell: bash
         run: |
           npm run affected:build -- --base=origin/master~1 --head=origin/master --prod --parallel --maxParallel=2
+      - name: List Affected Apps
+        shell: bash
+        run: |
+          npx nx print-affected --target=build --select=tasks.target.project --configuration=production
 
   deploy:
     runs-on: ubuntu-latest
