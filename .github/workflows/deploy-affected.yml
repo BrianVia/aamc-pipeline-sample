@@ -110,7 +110,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
-        npm run affected:build --base=6903fd9f76905fcd52163c5fdca414841b433fc7 --head=838c1276447b05b2e7e8a9e06fdb38e2594d4903 --prod --parallel --maxParallel=2
+          npm run affected:build -- --base=6903fd9f76905fcd52163c5fdca414841b433fc7 --head=838c1276447b05b2e7e8a9e06fdb38e2594d4903 --prod --parallel --maxParallel=2
       - name: List Affected Apps
         shell: bash
         run: |
