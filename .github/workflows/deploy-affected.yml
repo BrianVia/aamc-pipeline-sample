@@ -118,7 +118,7 @@ jobs:
       - name: 'List Files'
         shell: bash
         run: |
-          ls -al .dist/
+          ls -al dist/
 
   deploy:
     runs-on: ubuntu-latest
