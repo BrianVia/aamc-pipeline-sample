@@ -94,6 +94,10 @@ jobs:
         shell: bash
         run: |
           npx nx print-affected --target=build --select=tasks.target.project --base=6903fd9f76905fcd52163c5fdca414841b433fc7 --head=838c1276447b05b2e7e8a9e06fdb38e2594d4903
+      - name: 'List Files'
+        shell: bash
+        run: |
+          ls -al
 
   deploy:
     runs-on: ubuntu-latest
