@@ -64,7 +64,7 @@ jobs:
       - name: Unit Tests
         shell: bash
         run: |
-          npm run affected:test -- --base=origin/master~1 --head=origin/master --parallel --maxParallel=2
+          npm run affected:test -- --base=6903fd9f76905fcd52163c5fdca414841b433fc7 --head=838c1276447b05b2e7e8a9e06fdb38e2594d4903 --head=origin/master --parallel --maxParallel=2
 
   end-to-end:
     runs-on: ubuntu-latest
@@ -89,7 +89,7 @@ jobs:
         env:
           CYPRESS_KEY: ${{secrets.CYPRESS_KEY}}
         run: |
-          npm run affected:e2e --base=origin/master~1 --record --key "$CYPRESS_KEY"  --parallel --maxParallel=2 -- --parallel
+          npm run affected:e2e -- --base=6903fd9f76905fcd52163c5fdca414841b433fc7 --head=838c1276447b05b2e7e8a9e06fdb38e2594d4903 --record --key "$CYPRESS_KEY"  --parallel --maxParallel=2 -- --parallel
 
   build:
     runs-on: ubuntu-latest
