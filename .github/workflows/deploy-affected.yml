@@ -64,7 +64,7 @@ jobs:
       - name: Unit Tests
         shell: bash
         run: |
-          npx nx affected:test -- --base=origin/master~1 --head=origin/master --parallel --maxParallel=2
+          npm run affected:test -- --base=origin/master~1 --head=origin/master --parallel --maxParallel=2
 
   end-to-end:
     runs-on: ubuntu-latest
@@ -86,8 +86,10 @@ jobs:
           npm ci
       - name: End-to-End
         shell: bash
+        env:
+          CYPRESS_KEY: ${{secrets.CYPRESS_KEY}}
         run: |
-          npx nx affected:e2e --parallel --maxParallel=2 -- --parallel
+          npm run affected:e2e --record --key "$CYPRESS_KEY"  --parallel --maxParallel=2 -- --parallel
 
   build:
     runs-on: ubuntu-latest
