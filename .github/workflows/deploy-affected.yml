@@ -89,7 +89,7 @@ jobs:
         env:
           CYPRESS_KEY: ${{secrets.CYPRESS_KEY}}
         run: |
-          npm run affected:e2e --record --key "$CYPRESS_KEY"  --parallel --maxParallel=2 -- --parallel
+          npm run affected:e2e --base=origin/master~1 --record --key "$CYPRESS_KEY"  --parallel --maxParallel=2 -- --parallel
 
   build:
     runs-on: ubuntu-latest
