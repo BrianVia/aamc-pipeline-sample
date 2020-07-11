@@ -64,7 +64,7 @@ jobs:
       - name: Unit Tests
         shell: bash
         run: |
-          nx affected:test -- --base=origin/master~1 --head=origin/master --parallel --maxParallel=2
+          npx nx affected:test -- --base=origin/master~1 --head=origin/master --parallel --maxParallel=2
 
   end-to-end:
     runs-on: ubuntu-latest
@@ -87,7 +87,7 @@ jobs:
       - name: End-to-End
         shell: bash
         run: |
-          nx affected:e2e --parallel --maxParallel=2 -- --parallel
+          npx nx affected:e2e --parallel --maxParallel=2 -- --parallel
 
   build:
     runs-on: ubuntu-latest
