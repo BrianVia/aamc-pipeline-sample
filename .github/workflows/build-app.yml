@@ -63,4 +63,5 @@ jobs:
       - name: 'Deploy'
         shell: bash
         run: |
-          ls -lash dist/
+          OUTPUT_PATH=$(cat angular.json | jq -r '.projects.${{ github.event.inputs.app }}.architect.build.options.outputPath')
+          echo $OUTPUT_PATH
