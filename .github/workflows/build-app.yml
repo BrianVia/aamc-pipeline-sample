@@ -64,8 +64,3 @@ jobs:
         shell: bash
         run: |
           ls -lash dist/${{ github.event.inputs.app }}
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: ['build']
-    steps:
