@@ -1,4 +1,4 @@
-name: Deploy Affected
+name: Build Application
 on:
   workflow_dispatch:
     inputs:
