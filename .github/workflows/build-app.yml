@@ -59,7 +59,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          npm run build ${{ github.event.inputs.git-ref }}
+          npm run build ${{ github.event.inputs.app }}
 
   deploy:
     runs-on: ubuntu-latest
